@@ -6,13 +6,11 @@ const contactUserSchema = Yup.object().shape({
   name: Yup.string()
     .required("Required!")
     .min(3, "Too short!")
-    .max(50, "Too long!")
-    .matches(/^\S.*\S$/, "Enter without whitespace!"),
+    .max(50, "Too long!"),
   number: Yup.string()
     .required("Required!")
     .min(3, "Too short!")
-    .max(50, "Too long!")
-    .matches(/^[0-9-]+$/, "Enter only numbers and dashes!"),
+    .max(50, "Too long!"),
 });
 
 const FORM_INITIAL_VALUES = {
